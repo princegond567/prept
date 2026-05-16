@@ -25,12 +25,19 @@ export const metadata = {
   description: "",
 };
 
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider appearance={{
       theme:dark,
     }}>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className="bg-background">
         <body className={`${lora.variable} ${dmSans.variable} font-sans bg-background text-foreground antialiased`} suppressHydrationWarning>
           <ThemeProvider
             attribute="class"
