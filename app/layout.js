@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
         <body className={`${lora.variable} ${dmSans.variable} font-sans bg-background text-foreground antialiased`} suppressHydrationWarning>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
